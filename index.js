@@ -8,7 +8,8 @@ app.listen(3001, () => {
   });
 
 app.get('/',(req,res)=>{
-    res.send('this works')
+    const db=dbconnect()
+    res.send(db.collection('celebs'))
 }
 )
 
